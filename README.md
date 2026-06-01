@@ -1,1 +1,1 @@
-# 48-kingdoms
+# 48 Kingdoms Fantasy World Cup
