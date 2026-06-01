@@ -39,7 +39,7 @@ export default function NationsPage() {
     return matchSearch && matchFilter
   })
 
-  const groups = [...new Set(nations.map(n => n.group_label))].sort()
+  const groups = Array.from(new Set(nations.map((n: any) => n.group_label))).sort()
 
   if (loading) return (
     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
