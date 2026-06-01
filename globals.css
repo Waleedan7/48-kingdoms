@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --red: #E61D25;
+  --green: #3CAC3B;
+  --blue: #2A398D;
+  --grey: #474A4A;
+  --light: #D1D4D1;
+  --gold: #FFD700;
+  --bg: #0a0a0f;
+  --surface: #13131a;
+  --surface2: #1c1c26;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--light);
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  font-family: Impact, sans-serif;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.accent-bar {
+  height: 3px;
+  background: linear-gradient(to right, var(--red), var(--blue), var(--green));
+  width: 100%;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+}
+
+.btn-primary {
+  background: var(--red);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Montserrat', sans-serif;
+}
+.btn-primary:hover { background: #c4161d; transform: translateY(-1px); }
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Montserrat', sans-serif;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+.gold-text { color: var(--gold); }
+.red-text { color: var(--red); }
+.green-text { color: var(--green); }
+.blue-text { color: var(--blue); }
+.muted { color: rgba(209,212,209,0.5); }
+
+.status-available  { background: rgba(60,172,59,0.15);  color: #3CAC3B; border: 1px solid rgba(60,172,59,0.3);  }
+.status-drafted    { background: rgba(42,57,141,0.2);   color: #7b8fe0; border: 1px solid rgba(42,57,141,0.4);  }
+.status-eliminated { background: rgba(71,74,74,0.3);    color: #888;    border: 1px solid rgba(71,74,74,0.4);   }
+.status-champion   { background: rgba(255,215,0,0.15);  color: #FFD700; border: 1px solid rgba(255,215,0,0.3);  }
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
