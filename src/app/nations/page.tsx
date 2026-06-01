@@ -22,9 +22,9 @@ export default function NationsPage() {
       const [{ data: prof }, { data: nat }] = await Promise.all([
         supabase.from('profiles').select('*').eq('id', user.id).single(),
         supabase.from('nations')
-          .select('*, owner:profiles!nations_owner_id_fkey(username)')
-          .eq('tournament_id', TOURNAMENT_ID)
-          .order('group_label').order('name'),
+        .select('*, owner:profiles(username)')
+        .eq('tournament_id', TOURNAMENT_ID)
+        .order('group_label').order('name'),
       ])
       setProfile(prof)
       setNations(nat || [])
