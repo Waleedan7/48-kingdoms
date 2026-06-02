@@ -37,6 +37,7 @@ export default function Navbar({ username }: { username?: string }) {
           <Link href="/nations" style={{ color: 'rgba(209,212,209,0.6)', textDecoration: 'none', fontSize: 13, padding: '6px 12px', fontWeight: 600 }}>Nations</Link>
           <Link href="/draft" style={{ color: 'rgba(209,212,209,0.6)', textDecoration: 'none', fontSize: 13, padding: '6px 12px', fontWeight: 600 }}>Draft</Link>
           <Link href="/matches" style={{ color: 'rgba(209,212,209,0.6)', textDecoration: 'none', fontSize: 13, padding: '6px 12px', fontWeight: 600 }}>Matches</Link>
+          <Link href="/leagues" style={{ color: 'rgba(209,212,209,0.6)', textDecoration: 'none', fontSize: 13, padding: '6px 12px', fontWeight: 600 }}>Leagues</Link>
           {username && (
             <span style={{ color: 'var(--gold)', fontSize: 13, fontWeight: 700, marginLeft: 8 }}>
               👤 {username}
