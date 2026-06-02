@@ -33,7 +33,7 @@ export default function LeaguesPage() {
         .eq('created_by', user.id)
 
       const memberIds = (memberships || []).map((m: any) => m.tournament_id)
-      const allIds = [...new Set([...memberIds, ...(created || []).map((t: any) => t.id)])]
+      const allIds = Array.from(new Set([...memberIds, ...(created || []).map((t: any) => t.id)]))
 
       if (allIds.length > 0) {
         const { data: leagues } = await supabase
